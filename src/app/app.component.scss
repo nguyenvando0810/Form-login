@@ -1,79 +1,136 @@
+$white: #FFFFFF;
+$gray: #afafaf;
+$blue: #4d87e9;
+
 .content {
   display: flex;
-  margin: 82px auto 32px;
-  padding: 0 16px;
-  max-width: 960px;
   flex-direction: column;
   align-items: center;
-}
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 75px;
+  font-size: 14px;
 
-svg.material-icons {
-  height: 24px;
-  width: auto;
-}
+  &.bg-blue {
+    background-color: $blue;
+  }
 
-svg.material-icons:not(:last-child) {
-  margin-right: 8px;
-}
+  .form-login {
+    width: 900px;
+    background-color: $white;
+    margin: 0 auto;
+    overflow: hidden;
 
-.card svg.material-icons path {
-  fill: #888;
-}
+    a {
+      color: $blue;
+      text-decoration: none;
+    }
 
-.card {
-  border-radius: 4px;
-  border: 1px solid #eee;
-  background-color: #fafafa;
-  height: 40px;
-  width: 200px;
-  margin: 0 8px 16px;
-  padding: 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-  line-height: 24px;
-}
+    &-content,
+    &-img {
+      height: 100%;
+    }
 
-.card.card-small {
-  height: 16px;
-  width: 168px;
-}
+    &-content {
+      padding: 75px;
+    }
 
-.card.highlight-card {
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
-  border: none;
-  width: auto;
-  min-width: 30%;
-  position: relative;
-}
+    &-img {
+      background-color: #ededed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-.card.card.highlight-card span {
-  margin-left: 60px;
-}
+      i-feather {
+        width: 100px;
+        height: 100px;
+        color: #cecece;
+      }
+    }
 
-svg#rocket {
-  width: 80px;
-  position: absolute;
-  left: -10px;
-  top: -24px;
-}
+    &-title {
+      color: #4b4b4b;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
 
-svg#rocket-smoke {
-  height: calc(100vh - 95px);
-  position: absolute;
-  top: 10px;
-  right: 180px;
-  z-index: -10;
-}
+    &-newuser {
+      color: #7d7d7d;
+      margin-top: 20px;
+    }
 
-svg#clouds {
-  position: fixed;
-  bottom: -160px;
-  left: -230px;
-  z-index: -10;
-  width: 1920px;
+    form {
+      margin-top: 30px;
+
+      .forgot-password {
+        text-align: right;
+      }
+
+      h4 {
+        text-align: center;
+        border-bottom: 2px solid #eaeaea;
+        line-height: 1.5px;
+        margin: 25px 10px;
+        color: $gray;
+
+        span {
+          background: $white;
+          padding: 0 10px;
+          font-weight: 400;
+        }
+      }
+
+      .mv3 {
+        position: relative;
+      }
+
+      input {
+        width: 100%;
+        padding: 15px 20px 15px 60px;
+        border: 1px solid $gray;
+        border-radius: 50px;
+        outline: none;
+      }
+
+      ::placeholder {
+        color: #c0c0c0;
+        font-size: 14px;
+      }
+
+      i-feather {
+        color: $gray;
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        width: 20px;
+        height: 15px;
+      }
+    }
+
+
+    &-btn {
+      button {
+        width: 100%;
+        padding: 5px;
+        padding: 15px;
+        border: none;
+        border-radius: 50px;
+        color: $white;
+        outline: none;
+        cursor: pointer;
+
+        &.btn-default {
+          background-color: $gray;
+        }
+
+        &.btn-facebook {
+          background-color: #4267b2;
+        }
+
+        &.btn-google {
+          background-color: #db4437;
+        }
+      }
+    }
+  }
 }
